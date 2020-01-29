@@ -1,0 +1,110 @@
+# Software Engineering Practices Part II:
+
+### Testing
+
+ 	* Not commonly done by Data Scientists
+
+#### Testing and Data Science
+
+	* Data science code can be incorrect and not crash the system - more difficult to find because have to check quality of the analysis, not just code
+		* Bad encoding
+		* Inappropriate features
+		* Unexpected features
+	* Test Driven Development - writing tests before developing code to implement tasks
+
+### Unit Tests
+
+	> Test that covers a small unit of code, usually a function
+
+	* Test functions in a way that is repeatable and automated. 
+	* Ideally, we'd run a test program that runs all our unit tests and cleanly lets us know which ones failed and which ones succeeded
+	* To show that all the parts of our program work with each other properly, communicating and transferring data between them correctly, we use integration tests
+	* https://www.fullstackpython.com/integration-testing.html
+
+#### Unit Testing Tools
+
+	* Pytest
+		* pip install -U pytest
+		* write a test file; filename and functions need to start with "test_"
+
+### Test Driven Development
+
+	> TDD = you write the test before the code is written
+
+	* Your test will fail at first and will resolve as you correct and write your code
+	
+    	* TEST DRIVEN DEVELOPMENT: writing tests before you write the code that’s being tested. Your test would fail at first, and you’ll know you’ve finished implementing a task when this test passes.
+    	* Tests can check for all the different scenarios and edge cases you can think of, before even starting to write your function. This way, when you do start implementing your function, you can run this test to get immediate feedback on whether it works or not in all the ways you can think of, as you tweak your function.
+    	* When refactoring or adding to your code, tests help you rest assured that the rest of your code didn't break while you were making those changes. Tests also helps ensure that your function behavior is repeatable, regardless of external parameters, such as hardware and time.
+
+	* https://www.linkedin.com/pulse/data-science-test-driven-development-sam-savage/
+	* http://engineering.pivotal.io/post/test-driven-development-for-data-science/
+	* https://medium.com/@karijdempsey/test-driven-development-is-essential-for-good-data-science-heres-why-db7975a03a44
+	* http://docs.python-guide.org/en/latest/writing/tests/S
+
+### Logging
+
+	> Logging is the process of recording messages to describe events that have occurred while running your software
+
+#### Log Messages
+
+	* Didn't learn much from this one.  Don't see how its applied
+
+### Code Review
+
+	* Catch errors
+	* Ensure readability
+	* Check standards are met
+	* Share knowledge among teams
+	* Ideally data science code is done by another data scientist
+	* https://github.com/lyst/MakingLyst/tree/master/code-reviews
+	* https://www.kevinlondon.com/2015/05/05/code-review-best-practices.html
+
+#### Questions to ask yourself
+	
+	
+    Is the code clean and modular?
+
+        Can I understand the code easily?
+        Does it use meaningful names and whitespace?
+        Is there duplicated code?
+        Can you provide another layer of abstraction?
+        Is each function and module necessary?
+        Is each function or module too long?
+
+    Is the code efficient?
+
+        Are there loops or other steps we can vectorize?
+        Can we use better data structures to optimize any steps?
+        Can we shorten the number of calculations needed for any steps?
+        Can we use generators or multiprocessing to optimize any steps?
+
+    Is documentation effective?
+
+        Are in-line comments concise and meaningful?
+        Is there complex code that's missing documentation?
+        Do function use effective docstrings?
+        Is the necessary project documentation provided?
+
+    Is the code well tested?
+
+        Does the code high test coverage?
+        Do tests check for interesting cases?
+        Are the tests readable?
+        Can the tests be made more efficient?
+
+    Is the logging effective?
+
+        Are log messages clear, concise, and professional?
+        Do they include all relevant and useful information?
+        Do they use the appropriate logging level?
+
+	* Can use a linter to very standards - pylint - https://www.pylint.org/
+
+
+
+
+
+
+
+	

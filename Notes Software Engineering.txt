@@ -1,0 +1,60 @@
+# Software Engineering Practices Part I:
+
+### Clean and Modular Code
+	
+    	PRODUCTION CODE: software running on production servers to handle live users and data of the intended audience. Note this is different from production quality code, which describes code that meets expectations in reliability, efficiency, etc., for production. Ideally, all code in production meets these expectations, but this is not always the case.
+    	CLEAN: readable, simple, and concise. A characteristic of production quality code that is crucial for collaboration and maintainability in software development.
+    	MODULAR: logically broken up into functions and modules. Also an important characteristic of production quality code that makes your code more organized, efficient, and reusable.
+    	MODULE: a file. Modules allow code to be reused by encapsulating them into files that can be imported into other files.
+
+### Refactoring Code 
+
+	> Restructuring code to improve internal structure without changing external functionality
+
+	* The beginning of code writing is messy.  That's ok.  Get it to work then go back, clean it, and modularize it.
+	* Reduce workload in long rode
+	* Reuse more of your code
+
+####  Efficient Code
+
+	* Reduce run time
+	* Reducing space in memory
+	* How important efficiency is dependent on the context of the project
+
+	* Use pandas or numpy vector computations to not rely on loops
+	* Is there a data structure that allows the task to be done easier?  (e.g. sets, lists, dictionaries, etc)
+
+### Writing Clean Code
+
+	PEP 8 -- Style Guide for Python Code = https://www.python.org/dev/peps/pep-0008/?#code-lay-out
+
+### Writing Modular Code
+
+	* Don't repeat yourself, this method allows you to reuse your code
+	* Abstract out logic to improve readability
+	* Minimize the number of entities (functions, classes, modules, etc)
+	* Functions should do one thing
+	* Arbitrary variable names can be more effective in certain functions
+	* Try to use fewer than three arguments per function (can be violated depending on your judgement)
+
+### Documentation
+
+	> Additional text or illustrations that comes with or is embedded in software code
+
+	* Clarify complex parts of code
+	* Navigate code easier
+
+#### Levels of documentation
+
+	* Line level 
+		* Careful - over line commentation can be a sign of sloppy code
+	* Function or module level
+		* All functions should have doc strings.  Provide one line summary.  If you need more then include beneath in good format.
+	* Project level (e.g. readme file)
+		* At a minimum, this should explain what it does, list its dependencies, and provide sufficiently detailed instructions on how to use it. You want to make it as simple as possible for others to understand the purpose of your project, and quickly get something working.
+
+### Version Control for Data Science
+
+	* Complete Git course
+	* Version control for ML - https://algorithmia.com/blog/how-to-version-control-your-production-machine-learning-models
+	* 
