@@ -1,0 +1,80 @@
+# Intro to Object Oriented Programming
+
+### Objects
+
+	* Objects are defined by characteristics and actions - objects have characteristics and actions
+	* Characteristics = attributes (nouns); actions = methods (verbs)
+
+### Class, Object, Method and Attributes
+
+	* Vocabulary
+		
+    class - a blueprint consisting of methods and attributes
+    object - an instance of a class. It can help to think of objects as something in the real world like a yellow pencil, a small dog, a blue shirt, etc. However, as you'll see later in the lesson, objects can be more abstract.
+    attribute - a descriptor or characteristic. Examples would be color, length, size, etc. These attributes can take on specific values like blue, 3 inches, large, etc.
+    method - an action that a class or object could take
+    OOP - a commonly used abbreviation for object-oriented programming
+    encapsulation - one of the fundamental ideas behind object-oriented programming is called encapsulation: you can combine functions and data all into a single entity. In object-oriented programming, this single entity is called a class. Encapsulation allows you to hide implementation details much like how the scikit-learn package hides the implementation of machine learning algorithms.
+
+### OOP Syntax
+
+	* Function vs Method - They both use the def keyword. They also have inputs and return outputs. The difference is that a method is inside of a class whereas a function is outside of a class.
+
+	* Capitalize the first letter of a class (convention not required by Python)
+
+### Magic Methods
+
+	*  Ex Adding two Gaussian distributions
+		* The mean of the new distribution is simply the sum of the two distributions
+		* The standard deviation is the square root of the sum of the squares of the standard deviations 
+		* Python cannot do this function naturally
+	* Magic methods allow us to cause Python to overwrite default behavior
+	* The init method (___init___) is a magic method
+	* There is a __add__ magic method = def __add__(self, other)
+		* The 
+	* There are dozens of magic methods - all the arithmetic operands have magic methods
+
+### Inheritance
+
+	* Creating classes within classes you can have the subordinate class inherit attributes from the parent class
+
+#### Classes, object, attributes, methods, and inheritance are common to all object-oriented programming languages.
+
+####Knowing these topics is enough to start writing object-oriented software. What you've learned so far is all you need to know to complete this OOP lesson. However, these are only the fundamentals of object-oriented programming. 
+
+https://realpython.com/instance-class-and-static-methods-demystified/
+https://www.python-course.eu/python3_class_and_instance_attributes.php
+https://easyaspython.com/mixins-for-fun-and-profit-cb9962760556
+https://realpython.com/primer-on-python-decorators/
+
+### Making a Package
+
+	* Jupyter notebooks are not good for writing modular programs, which require separating code into different files
+	* A python module is just a python file containing code
+	* A package is a collection of python modules
+	* Although the code might already seem like it was a Python package because it contained multiple files, a Python package also needs an __init__.py file
+		* The init file can be blank but it's best to inlcude code that points to the appropriate class
+
+### Virtual Environments
+
+	* Can use either conda or venv
+	* Pip can only manage Python packages whereas conda is a language agnostic package manager. In fact, conda was invented because pip could not handle data science packages that depended on libraries outside of Python.
+	* Whether you choose to create environments with venv or conda will depend on your use case. Conda is very helpful for data science projects, but conda can make generic Python software development a bit more confusing; that's the case for this project.
+	* If you create a conda environment, activate the environment, and then pip install the distributions package, you'll find that the system installs your package globally rather than in your local conda environment. However, if you create the conda environment and install pip simultaneously, you'll find that pip behaves as expected installing packages into your local environment
+	* Using pip with venv works as expected. Pip and venv tend to be used for generic software development projects including web development
+
+### Contributing to a GitHub Project
+
+	* https://akrabat.com/the-beginners-guide-to-contributing-to-a-github-project/
+	* https://github.com/MarcDiethelm/contributing/blob/master/README.md
+
+#### Advanced Python OOP topics
+
+	* https://realpython.com/primer-on-python-decorators/
+	* https://easyaspython.com/mixins-for-fun-and-profit-cb9962760556
+
+### Uploading Packages to PyPi
+
+	* https://packaging.python.org/tutorials/distributing-packages/
+	* https://docs.python.org/3/distutils/packageindex.html
+	* https://opensource.org/licenses/MIT
